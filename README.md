@@ -45,3 +45,5 @@ GitOps and Kubernetes
 While the principle of GitOps is not strictly limited to Kubernetes, most popular modern tools like Argo CD and Flux are specifically designed to target Kubernetes clusters
 . For a neutral, tool-independent definition of these principles, the video recommends referring to the Open GitOps project
 
+<img width="277" height="182" alt="download" src="https://github.com/user-attachments/assets/f7d6d8a1-2c14-42bd-980f-e536e69ae64c" />
+
