@@ -11,31 +11,7 @@ Audit Challenges: It was often impossible to identify exactly which user made a 
 CD Inconsistency: While Continuous Integration (CI) typically follows a versioned Git-integrated approach, Continuous Delivery (CD) often lacked that same level of rigor
 .
 Scalability Issues: Managing hundreds of clusters and thousands of resources manually is highly inefficient and prone to error
-.
-The GitOps Workflow
-The GitOps architecture standardizes delivery through a continuous loop between the source code and the live environment
-.
-graph LR
-    subgraph "Development Phase"
-    A[DevOps Engineer] -- "1. Update Manifests <br>(pod.yaml, node.yaml)" --> B(Git Repository)
-    B -- "2. Pull Request & Review" --> B
-    end
 
-    subgraph "GitOps Controller (Argo CD / Flux)"
-    C[Git Cache] 
-    D[Reconciliation Loop]
-    E[Cluster Cache]
-    end
-
-    subgraph "Infrastructure"
-    F[Kubernetes Cluster]
-    end
-
-    B -- "3. Detected Change <br>(Pull/Push)" --> C
-    F -- "4. Continuous Monitoring" --> E
-    C -- "Desired State" --> D
-    E -- "Live State" --> D
-    D -- "5. Automated Sync / <br>Auto-Healing" --> F
 Declarative Updates: An engineer updates a declarative YAML manifest (e.g., pod.yaml) in a repository
 .
 Peer Review: The change is submitted via a Pull Request (PR) for verification by other team members
